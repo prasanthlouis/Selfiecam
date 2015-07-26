@@ -1,3 +1,8 @@
 # cache for current jar dependency. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
+<<<<<<< HEAD
+=======
+1418380753522 627582 cb6883d96005bc85b3e868f204507ea5b4fa9bbf F:\New folder\selfiecam\libs\android-support-v4.jar
+1389945690000 627582 cb6883d96005bc85b3e868f204507ea5b4fa9bbf F:\New folder\appcompat_v7_5\libs\android-support-v4.jar
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515

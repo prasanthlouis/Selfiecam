@@ -25,8 +25,12 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:onClick="onClick"
+<<<<<<< HEAD
       android:text=""
       android:background="@null" />
+=======
+      android:text="" />
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 
 </RelativeLayout>
 

@@ -2,17 +2,24 @@ package com.psiuol21.selfiecam;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import android.app.ActionBar;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+=======
+import android.content.pm.PackageManager;
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 import android.hardware.Camera;
 import android.hardware.Camera.AutoFocusCallback;
 import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.Parameters;
 import android.hardware.Camera.Size;
+<<<<<<< HEAD
 import android.media.MediaPlayer;
+=======
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -22,10 +29,15 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+=======
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
@@ -34,12 +46,18 @@ public class MainActivity extends ActionBarActivity {
 	  private int cameraId = 0;
 	  private CameraPreview mPreview;
 	  private MediaRecorder mMediaRecorder;
+<<<<<<< HEAD
 	  public MediaPlayer mp;
 	 
+=======
+	  
+
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 		ActionBar mActionBar = getActionBar();
 		mActionBar.setDisplayShowHomeEnabled(false);
 		mActionBar.setDisplayShowTitleEnabled(false);
@@ -65,6 +83,9 @@ public class MainActivity extends ActionBarActivity {
 			}
 		});
 		 mp = MediaPlayer.create(getApplicationContext(), R.raw.click);
+=======
+		 getActionBar().hide();
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 		   if (!getPackageManager()
 			        .hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
 			      Toast.makeText(this, "No camera on this device", Toast.LENGTH_LONG)
@@ -96,11 +117,16 @@ public class MainActivity extends ActionBarActivity {
 			            if(sizes.get(i).width > size.width)
 			                size = sizes.get(i);
 			        }
+<<<<<<< HEAD
 			        
 			        params.setPictureSize(size.width, size.height);
 			        camera.setParameters(params);
 			        
 	             
+=======
+			        params.setPictureSize(size.width, size.height);
+			        camera.setParameters(params);
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 			      }
 			    }
 
@@ -108,8 +134,11 @@ public class MainActivity extends ActionBarActivity {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
+<<<<<<< HEAD
 		
 		
+=======
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 	}
 	
 	
@@ -131,6 +160,7 @@ public class MainActivity extends ActionBarActivity {
 	 
 	public void onClick(View view) {
 		camera.autoFocus(new AutoFocusCallback() {
+<<<<<<< HEAD
 			   public void onAutoFocus(boolean success, Camera camera) {
 	            if(success){
 	            	  mp.stop();
@@ -150,6 +180,14 @@ public class MainActivity extends ActionBarActivity {
 	           
 	                camera.startPreview();
 	              
+=======
+	        public void onAutoFocus(boolean success, Camera camera) {
+	            if(success){
+	                camera.takePicture(null, null,
+	            new PhotoHandler(getApplicationContext()));
+	                camera.cancelAutoFocus();
+	                camera.startPreview();
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 	           
 	            }
 	        }
@@ -161,12 +199,15 @@ public class MainActivity extends ActionBarActivity {
 	//	       new PhotoHandler(getApplicationContext()));
  //   camera.startPreview();
 		  }
+<<<<<<< HEAD
 	
 	
 	
 	
 	
 
+=======
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 	 
 
 
@@ -195,7 +236,13 @@ public class MainActivity extends ActionBarActivity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
+<<<<<<< HEAD
 		
+=======
+		if (id == R.id.action_settings) {
+			return true;
+		}
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 		return super.onOptionsItemSelected(item);
 	}
 

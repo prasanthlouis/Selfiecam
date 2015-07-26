@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+<<<<<<< HEAD
     <string name="app_name" translatable="false">selfiecam</string>
    <string name="hello_world" translatable="false">Hello world!</string>
     <string name="action_settings" translatable="false">Settings</string>
+=======
+    <string name="app_name">selfiecam</string>
+   <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 
 </resources>

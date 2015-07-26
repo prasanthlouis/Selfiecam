@@ -8,8 +8,11 @@ import java.util.Date;
 import android.content.Context;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
+<<<<<<< HEAD
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+=======
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
@@ -17,8 +20,11 @@ import android.widget.Toast;
 public class PhotoHandler implements PictureCallback {
 
   private final Context context;
+<<<<<<< HEAD
   MediaScannerConnection conn;
 
+=======
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 
   public PhotoHandler(Context context) {
     this.context = context;
@@ -28,7 +34,11 @@ public class PhotoHandler implements PictureCallback {
   public void onPictureTaken(byte[] data, Camera camera) {
 
     File pictureFileDir = getDir();
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
     if (!pictureFileDir.exists() && !pictureFileDir.mkdirs()) {
 
   //    Log.d(MakePhotoActivity.DEBUG_TAG, "Can't create directory to save image.");
@@ -45,7 +55,10 @@ public class PhotoHandler implements PictureCallback {
     String filename = pictureFileDir.getPath() + File.separator + photoFile;
 
     File pictureFile = new File(filename);
+<<<<<<< HEAD
    
+=======
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 
     try {
       FileOutputStream fos = new FileOutputStream(pictureFile);
@@ -53,13 +66,17 @@ public class PhotoHandler implements PictureCallback {
       fos.close();
       Toast.makeText(context, "New Image saved:" + photoFile,
           Toast.LENGTH_LONG).show();
+<<<<<<< HEAD
      
+=======
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
     } catch (Exception error) {
 //      Log.d(MakePhotoActivity.DEBUG_TAG, "File" + filename + "not saved: "
      //     + error.getMessage());
       Toast.makeText(context, "Image could not be saved.",
           Toast.LENGTH_LONG).show();
     }
+<<<<<<< HEAD
     new SingleMediaScanner(this.context, pictureFile);
     
    // startScan( pictureFileDir.getPath());
@@ -85,13 +102,19 @@ public class PhotoHandler implements PictureCallback {
   
 
 	
+=======
+  }
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 
   private File getDir() {
     File sdDir = Environment
       .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
     return new File(sdDir, "Selfiecam");
   }
+<<<<<<< HEAD
   
   
   
+=======
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 } 

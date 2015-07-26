@@ -3,8 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.selfiecam.MainActivity" >
 
+<<<<<<< HEAD
     
     
     
+=======
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+>>>>>>> 631654f04374ed3e840d9d81cf87662c4fec6515
 
 </menu>
